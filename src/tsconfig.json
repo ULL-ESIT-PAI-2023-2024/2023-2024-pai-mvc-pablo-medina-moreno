@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "CommonJS",
+      "lib": ["ESNEXT", "dom"],
+      "allowJs": true,
+      "rootDir": "./",
+      "outDir": "./dist",
+      "declaration": true,
+      "strictPropertyInitialization": true,     /* will raise an error when a class property was declared but not set in the constructor */
+      "strictNullChecks": true,                 /* When type checking, take into account `null` and `undefined`. */
+      "noImplicitAny": true,                    /* will issue an error whenever it would have inferred any:*/ 
+      "forceConsistentCasingInFileNames": true,
+      "esModuleInterop": true,
+      "alwaysStrict": true,                     /* Parse in strict mode and emit "use strict" for each source file. */
+      "strict": true,                           /* Enable all strict type-checking options. */
+      "noFallthroughCasesInSwitch": true,       /* Report errors for fallthrough cases in switch statement. */
+      "noImplicitReturns": true,                /* Report error when not all code paths in function return a value. */
+      "sourceMap": true                        /* Generates corresponding '.map' file. */
+    },
+    "include": [
+      "**/**/*.ts",
+    ],
+    "exclude": [
+          "node_modules",
+          "build",
+          "lib",
+          "test",
+          "public",
+          "**/*.d.ts" // map files
+    ]
+  }
