@@ -4,7 +4,7 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author Pablo Medina Moreno
+ * @author Pablo Medina Moreno, Sergio Perez Lozano
  * @since 11 04 2024
  * @description Class that represents the View in the MVC pattern
  * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
