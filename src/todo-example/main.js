@@ -4,7 +4,7 @@
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author Pablo Medina Moreno
+ * @author Pablo Medina Moreno, Sergio Perez Lozano
  * @since 11 04 2024
  * @description Class that represents the Model in the MVC pattern
  * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
@@ -82,7 +82,7 @@ var Model = /** @class */ (function () {
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author Pablo Medina Moreno
+ * @author Pablo Medina Moreno, Sergio Perez Lozano
  * @since 11 04 2024
  * @description Class that represents the View in the MVC pattern
  * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
@@ -250,7 +250,7 @@ var View = /** @class */ (function () {
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author Pablo Medina Moreno
+ * @author Pablo Medina Moreno, Sergio Perez Lozano
  * @since 11 04 2024
  * @description Class that represents the Controller in the MVC pattern
  * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
@@ -314,7 +314,7 @@ var Controller = /** @class */ (function () {
  * Grado en Ingeniería Informática
  * Programación de Aplicaciones Interactivas
  *
- * @author Pablo Medina Moreno
+ * @author Pablo Medina Moreno, Sergio Perez Lozano
  * @since 11 04 2024
  * @description Client-side MVC pattern implementation
  * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
