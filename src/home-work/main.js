@@ -35,7 +35,7 @@ var LissajousModel = /** @class */ (function () {
      */
     LissajousModel.prototype.setAmplitudeX = function (value) {
         this.amplitudeX = value;
-        this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
+        // this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
     };
     /**
      * Setter de la amplitud en el eje Y
@@ -43,7 +43,7 @@ var LissajousModel = /** @class */ (function () {
      */
     LissajousModel.prototype.setAmplitudeY = function (value) {
         this.amplitudeY = value;
-        this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
+        // this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
     };
     /**
      * Setter de la frecuencia en el eje X
@@ -51,7 +51,7 @@ var LissajousModel = /** @class */ (function () {
      */
     LissajousModel.prototype.setFrequencyX = function (value) {
         this.frequencyX = value;
-        this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
+        // this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
     };
     /**
      * Setter de la frecuencia en el eje Y
@@ -59,7 +59,7 @@ var LissajousModel = /** @class */ (function () {
      */
     LissajousModel.prototype.setFrequencyY = function (value) {
         this.frequencyY = value;
-        this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
+        // this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
     };
     /**
      * Setter de la fase de la función
@@ -67,7 +67,7 @@ var LissajousModel = /** @class */ (function () {
      */
     LissajousModel.prototype.setPhase = function (value) {
         this.phase = value;
-        this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
+        // this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
     };
     /**
      * Getter de la amplitud en el eje X
@@ -330,6 +330,8 @@ var LissajousController = /** @class */ (function () {
      */
     function LissajousController(model, view) {
         var _this = this;
+        this.model = model;
+        this.view = view;
         /**
          * @brief Método privado que actualiza la vista
          * @param amplitudeX Amplitud en el eje X
@@ -349,7 +351,7 @@ var LissajousController = /** @class */ (function () {
      * @brief Método privado que inicializa la aplicación
      */
     LissajousController.prototype.init = function () {
-        this.model.bindLissajousChanged(this.updateView);
+        // this.model.bindLissajousChanged(this.updateView);
         this.updateView(this.model.getAmplitudeX(), this.model.getAmplitudeY(), this.model.getFrequencyX(), this.model.getFrequencyY(), this.model.getPhase());
         this.handleSettersModel();
     };
@@ -362,6 +364,7 @@ var LissajousController = /** @class */ (function () {
             var action = event.detail.action;
             var value = event.detail.value;
             _this.updateModel(action, value);
+            _this.updateView(_this.model.getAmplitudeX(), _this.model.getAmplitudeY(), _this.model.getFrequencyX(), _this.model.getFrequencyY(), _this.model.getPhase());
         });
         document.addEventListener('animatePhi', function (event) {
             if (event.detail.value) {

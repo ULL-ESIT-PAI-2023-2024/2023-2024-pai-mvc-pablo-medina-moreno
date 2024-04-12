@@ -7,7 +7,7 @@
  * @author Pablo Medina Moreno
  * @since 06 03 2024
  * @description Clase que representa la vista de la aplicación
- * @see {@link * https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html}
+ * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
  */
 
 /// <reference path="grid.ts" />

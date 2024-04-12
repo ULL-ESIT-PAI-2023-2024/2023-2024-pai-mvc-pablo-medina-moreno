@@ -7,7 +7,7 @@
  * @author Pablo Medina Moreno
  * @since 06 03 2024
  * @description Clase que representa el controlador de la aplicación
- * @see {@link * https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html}
+ * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
  */
 
 ///<reference path='model.ts'/>
@@ -18,46 +18,38 @@
  * @brief Clase LissajousController que representa el controlador de la aplicación
  */
 class LissajousController {
-
-  /**
-   * @brief Atributos de la clase LissajousController
-   * @private model Modelo de la aplicación
-   * @private view Vista de la aplicación
-   */
-  private model: LissajousModel;
-  private view: LissajousView;
-
   /**
    * @brief Constructor de la clase LissajousController
    * @param model Modelo de la aplicación
    * @param view Vista de la aplicación
-   * @param phiAnimationInterval Intervalo de animación de la fase
    */
-  constructor(model: LissajousModel, view: LissajousView) {
+  constructor(private model: LissajousModel, private view: LissajousView) {
     this.model = model;
     this.view = view;
     this.init();
   }
 
   /**
-   * @brief Método privado que inicializa la aplicación
+   * @brief Método privado que inicializa la aplicación, actualizando la vista y manejando los eventos
    */
   private init(): void {
-    this.model.bindLissajousChanged(this.updateView);
     this.updateView(this.model.getAmplitudeX(), this.model.getAmplitudeY(), this.model.getFrequencyX(), this.model.getFrequencyY(), this.model.getPhase());
-    this.handleSettersModel();
+    this.handleEvents();
   }
 
   /**
-   * @brief Método privado que maneja los eventos de la aplicación y actualiza el modelo
+   * @brief Método privado que maneja los eventos, actualizando el modelo y la vista
    */
-  private handleSettersModel(): void {
+  private handleEvents(): void {
+    // Evento que se dispara cuando se cambia un input
     document.addEventListener('input-changed', (event: CustomEvent) => {
       const action = event.detail.action;
       const value = event.detail.value;
       this.updateModel(action, value);
+      this.updateView(this.model.getAmplitudeX(), this.model.getAmplitudeY(), this.model.getFrequencyX(), this.model.getFrequencyY(), this.model.getPhase());
     });
 
+    // Evento que se dispara cuando se cambia el checkbox de la animación de phi
     document.addEventListener('animatePhi', (event: CustomEvent) => {
       if (event.detail.value) {
         this.view.startPhiAnimation();

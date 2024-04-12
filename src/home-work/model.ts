@@ -7,9 +7,8 @@
  * @author Pablo Medina Moreno
  * @since 08 03 2024
  * @description Clase que representa el modelo de la aplicación
- * @see {@link * https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html}
+ * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
  */
-
 
 /**
  * Clase que representa el modelo de la aplicación
@@ -47,7 +46,6 @@ class LissajousModel {
    */
   public setAmplitudeX(value: number): void {
     this.amplitudeX = value;
-    this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
   }
 
   /**
@@ -56,7 +54,6 @@ class LissajousModel {
    */
   public setAmplitudeY(value: number): void {
     this.amplitudeY = value;
-    this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
   }
 
   /**
@@ -65,7 +62,6 @@ class LissajousModel {
    */
   public setFrequencyX(value: number): void {
     this.frequencyX = value;
-    this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
   }
   
   /**
@@ -74,7 +70,6 @@ class LissajousModel {
    */
   public setFrequencyY(value: number): void {
     this.frequencyY = value;
-    this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
   }
   
   /**
@@ -83,7 +78,6 @@ class LissajousModel {
    */
   public setPhase(value: number): void {
     this.phase = value;
-    this.lissajousChanged(this.amplitudeX, this.amplitudeY, this.frequencyX, this.frequencyY, this.phase);
   }
   
   /**
@@ -124,25 +118,5 @@ class LissajousModel {
    */
   public getPhase(): number {
     return this.phase;
-  }
-
-  /**
-   * Método que establece la función a ejecutar cuando la vista cambia
-   * @param callback Función a ejecutar
-   */
-  public bindLissajousChanged(callback: (amplitudeX: number, amplitudeY: number, frequencyX: number, frequencyY: number, phase: number) => void): void {
-    this.lissajousChanged = callback;
-  }
-
-  /**
-   * Método que se ejecuta cuando la vista cambia
-   * @param amplitudeX Amplitud en el eje X
-   * @param amplitudeY Amplitud en el eje Y
-   * @param frequencyX Frecuencia en el eje X
-   * @param frequencyY Frecuencia en el eje Y
-   * @param phase Fase de la función
-   */
-  private lissajousChanged(amplitudeX: number, amplitudeY: number, frequencyX: number, frequencyY: number, phase: number): void {
-    // Se espera que esta función sea definida por la instancia de Model en tiempo de ejecución.
   }
 }
