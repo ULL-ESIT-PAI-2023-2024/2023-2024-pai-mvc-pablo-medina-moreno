@@ -14,7 +14,7 @@
  * Clase que representa el modelo de la aplicación
  * @class LissajousModel 
  */
-class LissajousModel {
+export class LissajousModel {
   
   /**
    * @param amplitudeX Amplitud en el eje X

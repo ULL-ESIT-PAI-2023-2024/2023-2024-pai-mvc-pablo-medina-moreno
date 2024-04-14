@@ -11,9 +11,13 @@
  * @see {@link * https://www.typescriptlang.org/docs/handbook/triple-slash-directives.html}
  */
 
-///<reference path='model.ts'/>
-///<reference path='view.ts'/>
-///<reference path='controller.ts'/>
+// ///<reference path='model.ts'/>
+// ///<reference path='view.ts'/>
+// ///<reference path='controller.ts'/>
+
+import { LissajousModel } from './model.js';
+import { LissajousView } from './view.js';
+import { LissajousController } from './controller.js';
 
 
 /**

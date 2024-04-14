@@ -11,9 +11,9 @@
  * tsc --outFile main.js main.ts
  */
 
-/// <reference path="model.ts" />
-/// <reference path="view.ts" />
-/// <reference path="controller.ts" />
+import { Model } from './model.js';
+import { View } from './view.js';
+import { Controller } from './controller.js';
 
 /**
  * Main function that creates the model, view and controller

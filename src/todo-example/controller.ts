@@ -10,13 +10,13 @@
  * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
  */
 
-/// <reference path="model.ts" />
-/// <reference path="view.ts" />
+import { Model } from './model.js';
+import { View } from './view.js';
 
 /**
  * Class that represents the Controller in the MVC pattern
  */
-class Controller {
+export class Controller {
   /**
    * Model and View properties
    */

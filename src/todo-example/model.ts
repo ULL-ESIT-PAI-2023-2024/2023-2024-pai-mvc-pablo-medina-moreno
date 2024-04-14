@@ -13,7 +13,7 @@
 /**
  * Class that represents the Model in the MVC pattern
  */
-class Model {
+export class Model {
 
   /**
    * Array of todos, each todo is an object with an id, text and complete property

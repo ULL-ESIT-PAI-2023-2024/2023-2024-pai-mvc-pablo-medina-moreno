@@ -10,14 +10,17 @@
  * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
  */
 
-///<reference path='model.ts'/>
-///<reference path='view.ts'/>
+// ///<reference path='model.ts'/>
+// ///<reference path='view.ts'/>
+
+import { LissajousModel } from './model.js';
+import { LissajousView } from './view.js';
 
 
 /**
  * @brief Clase LissajousController que representa el controlador de la aplicación
  */
-class LissajousController {
+export class LissajousController {
   /**
    * @brief Constructor de la clase LissajousController
    * @param model Modelo de la aplicación
@@ -40,23 +43,41 @@ class LissajousController {
   /**
    * @brief Método privado que maneja los eventos, actualizando el modelo y la vista
    */
+  
   private handleEvents(): void {
     // Evento que se dispara cuando se cambia un input
-    document.addEventListener('input-changed', (event: CustomEvent) => {
-      const action = event.detail.action;
-      const value = event.detail.value;
+    // document.addEventListener('input-changed', (event: CustomEvent) => {
+    //   const action = event.detail.action;
+    //   const value = event.detail.value;
+    //   this.updateModel(action, value);
+    //   this.updateView(this.model.getAmplitudeX(), this.model.getAmplitudeY(), this.model.getFrequencyX(), this.model.getFrequencyY(), this.model.getPhase());
+    // });
+
+    // // Evento que se dispara cuando se cambia el checkbox de la animación de phi
+    // document.addEventListener('animatePhi', (event: CustomEvent) => {
+    //   if (event.detail.value) {
+    //     this.view.startPhiAnimation();
+    //   } else {
+    //     this.view.stopPhiAnimation();
+    //   }
+    // });
+    document.addEventListener('input-changed', (event: Event) => {
+      const customEvent = event as CustomEvent;
+      const action = customEvent.detail.action;
+      const value = customEvent.detail.value;
       this.updateModel(action, value);
       this.updateView(this.model.getAmplitudeX(), this.model.getAmplitudeY(), this.model.getFrequencyX(), this.model.getFrequencyY(), this.model.getPhase());
     });
-
-    // Evento que se dispara cuando se cambia el checkbox de la animación de phi
-    document.addEventListener('animatePhi', (event: CustomEvent) => {
-      if (event.detail.value) {
+    
+    document.addEventListener('animatePhi', (event: Event) => {
+      const customEvent = event as CustomEvent;
+      if (customEvent.detail.value) {
         this.view.startPhiAnimation();
       } else {
         this.view.stopPhiAnimation();
       }
     });
+    
   }
 
   /**

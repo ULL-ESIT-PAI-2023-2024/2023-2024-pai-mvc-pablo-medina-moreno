@@ -13,7 +13,7 @@
 /**
  * Class that represents the View in the MVC pattern
  */
-class View {
+export class View {
   /**
    * HTML elements
    */

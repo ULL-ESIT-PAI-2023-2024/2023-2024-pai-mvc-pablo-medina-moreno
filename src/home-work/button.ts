@@ -2,7 +2,7 @@
  * @class
  * @description Class for the buttons objects to be placed in tha page 
  */
-class Button {
+export class Button {
     private button : HTMLButtonElement;
     private action: string = ''; 
     private eventName: string = '';

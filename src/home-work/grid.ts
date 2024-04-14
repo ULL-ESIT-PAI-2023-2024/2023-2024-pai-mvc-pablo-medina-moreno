@@ -13,7 +13,7 @@
 /**
  * Clase que representa el fondo de cuadrícula
  */
-class GridBackground {
+export class GridBackground {
 
   /**
    * Constructor de la clase GridBackground

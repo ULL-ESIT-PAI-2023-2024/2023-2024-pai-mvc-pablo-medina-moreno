@@ -10,12 +10,13 @@
  * @see {@link * https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador}
  */
 
-/// <reference path="grid.ts" />
+// /// <reference path="grid.ts" />
 
+import { GridBackground } from './grid.js';
 /**
  * @brief Clase LissajousView que representa la vista de la aplicación
  */
-class LissajousView {
+export class LissajousView {
   
   /**
    * @brief Atributos de la clase LissajousView
