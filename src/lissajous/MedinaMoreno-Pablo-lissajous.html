@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>Práctica 10. Programación Gráfica Orientada a Eventos. Curvas de Lissajous</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="./dist/main.js"></script>
+</head>
+<body>
+  <h1>Las curvas de Lissajous Pablo Medina Moreno</h1>
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+  </ul>
+
+  <!-- Canvas para dibujar la curva de Lissajous -->
+  <div class="canvas-container">
+    <canvas id="canvas" width="1000" height="600" style="border:3px solid white;"></canvas>
+  </div>
+
+  <!-- Campos de entrada para los parámetros de la curva de Lissajous -->
+  <div class="params-container">
+    <label for="inputa">a</label>
+    <input id="inputa" type="number" value="3" step="any" min = "1" max = "20">
+    <br>
+    <label for="inputb">b</label>
+    <input id="inputb" type="number" value="2" step="any" min = "1" max = "20">
+    <br>
+    <label for="inputPhi">Ф</label>
+    <input id="inputPhi" type="number" value="0" step="any" min = "0" max = "2">
+    <br>
+    <input id="animatePhiCheckbox" type="checkbox" checked>
+    <label for="animatePhiCheckbox">Animate Ф</label>
+    <br>
+    <label for="inputA">A</label>
+    <input id="inputA" type="number" value="100" step="any">
+    <br>
+    <label for="inputB">B</label>
+    <input id="inputB" type="number" value="100" step="any">
+  </div>
+
+  <!-- Texto explicativo de las curvas de Lissajous -->
+  <div class="explanation">
+    <h2>Las curvas de Lissajous</h2>
+    <p>Las curvas de Lissajous son un conjunto de curvas paramétricas descritas por ecuaciones trigonométricas. Se utilizan en diversas áreas como la física, las matemáticas y la ingeniería para visualizar la relación entre dos oscilaciones perpendiculares.</p>
+    <p>Las ecuaciones que describen una curva de Lissajous son:</p>
+    <p>x(t) = A * sin(a * t + phi)</p>
+    <p>y(t) = B * sin(b * t)</p>
+    <p>Donde:</p>
+    <ul>
+      <li>A y B son las amplitudes de las oscilaciones en los ejes x e y, respectivamente.</li>
+      <li>a y b son las frecuencias de las oscilaciones en los ejes x e y, respectivamente.</li>
+      <li>phi es la fase inicial de la oscilación en el eje x.</li>
+    </ul>
+  </div>
+
+  <!-- Enlaces a páginas de referencia -->
+  <div class="references">
+    <h2>Referencias</h2>
+    <ul>
+      <li><a href="https://es.wikipedia.org/wiki/Curva_de_Lissajous">Wikipedia - Curva de Lissajous</a></li>
+      <li><a href="https://academo.org/demos/lissajous-curves/">Página de Referencia</a></li>
+      <li><a href="https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador">Modelo Vista Controlador</a></li>
+    </ul>
+  </div>
+</body>
+</html>
