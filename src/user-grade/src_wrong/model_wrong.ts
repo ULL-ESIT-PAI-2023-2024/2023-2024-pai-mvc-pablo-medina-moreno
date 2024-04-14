@@ -4,7 +4,7 @@ export class UserModel {
   public grade: number;
 
   constructor(name: string, grade: number) {
-      this.name = name;
-      this.grade = grade;
+    this.name = name;
+    this.grade = grade;
   }
 }

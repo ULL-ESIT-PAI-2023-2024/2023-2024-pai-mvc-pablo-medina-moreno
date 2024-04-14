@@ -42,7 +42,6 @@ export class View {
     this.title.textContent = 'Todos';
     this.todoList = this.createElement('ul', 'todo-list') as HTMLUListElement;
     this.app.append(this.title, this.form, this.todoList);
-
     this.temporaryTodoText = '';
     this.initLocalListeners();
   }

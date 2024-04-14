@@ -2,4 +2,4 @@
 
 Here you can find all the examples shown in the slides.
 
-Run npm i to install dependencies.
+Run ```npm i``` to install all the dependencies.
