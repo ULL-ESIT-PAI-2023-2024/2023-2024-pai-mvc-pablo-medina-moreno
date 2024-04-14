@@ -13,7 +13,7 @@
 /**
  * Class that represents the User in the MVC pattern
  */
-export class User {
+export class UserModel {
   private name: string;
   private grade: number;
 

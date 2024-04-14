@@ -11,16 +11,16 @@
  */
 
 import { UserController } from "./controller.js";
-import { User } from "./model.js";
+import { UserModel } from "./model.js";
 import { UserView } from "./view.js";
 
 /**
  * Main function that creates the model, view and controller
  */
 function main() {
-  const user = new User("Ricardo", 4.8);
+  const userModel = new UserModel("Ricardo", 4.8);
   const userView = new UserView();
-  const userController = new UserController(user, userView);
+  const userController = new UserController(userModel, userView);
 
   // Updating the user's data through the controller
   userController.updateName("Pedro");
